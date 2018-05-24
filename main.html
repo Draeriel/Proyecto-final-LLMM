@@ -1,97 +1,149 @@
 <!DOCTYPE html>
 <html>
-  <head>    
-    <title>Your Adventure</title>
-    <meta content="text/html; charset=utf-8" http-equiv="content-type">
-    <meta name="description" content="noticias mvpigs, fpdual" />
-    <meta name="keywords" content="mvpigs, dual, noticias, infinite, scroll"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="main.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <script src="main.js"></script>
-  </head>
+
+<head>
+  <title>Your Adventure</title>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type">
+  <meta name="description" content="noticias mvpigs, fpdual" />
+  <meta name="keywords" content="mvpigs, dual, noticias, infinite, scroll" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="main.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script src="main.js"></script>
+  <script type="text/javascript" src="muhTriangles.min.js"></script>
+</head>
+<header class="header">
+  <img class="icon" src="images/pig.png" />
+</header>
 <body>
-        <span></span>
-        <h1>Infinite Scrolling, Demo 2</h1>
+    <div style="position:fixed; z-index:-1; top:0; left:0; width:100%; height:100%;">
+        <canvas id="canvas" style="width:100%; height:100%;"></canvas>
+        <script type="text/javascript">new MuhTriangles("canvas", {"saturation":8,"huePeriod":80,"lightness":1.2,"outline":true,"outlineColor":"rgba(255,255,255,0.12)","outlineThickness":1,"gradientType":"radial","gradientIntensity":1,"gradientMode":"smooth","gradientInvert":false,"speed":1.7,"instability":1.3,"density":2,"responsiveDensity":true,"model":"hexagons","fps":22});</script>
+      </div>
+    <iframe class="spotify" src="https://open.spotify.com/embed/user/beprogmyfriend/playlist/64VvHoAAGJteE6F98yXSyM"
+              width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  <div id="posts">
+    <article>
+      <header>
+        <h1 class="title">El arte de copiar</h1>
+      </header>
+      <img src="images/11.jpg" data-toggle="modal" data-target="#myModal1" />
+      <div class="modal fade" id="myModal1" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">El arte de copiar</h4>
+            </div>
+            <div class="modal-body">
+              <p>Recientemente Abbas Kiarostami intentaba explicarnos qué significa copiar. Algo, por otro lado, que cualquier
+                alumno de secundaria sabe perfectamente. Siendo justos, lo que pretendía el director iraní era aclararnos,
+                entre otras cosas, la diferencia entre un original y su copia. Hablamos de la película 'Copia certificada',
+                con Juliette Binoche y William Shimel emulando quién sabe si a Ingrid Bergman y George Sanders en 'Te querré
+                siempre'.</p>
 
-        <ul id="posts">
-            <li>
-                <article>
-                    <header>
-                        <h3>El arte de copiar</h3>
-                    </header>
-                    <img src="images/11.jpg" data-toggle="modal" data-target="#myModal1"/>
-                    
-                    
-                    <div class="modal fade" id="myModal1" role="dialog">
-                            <div class="modal-dialog modal-lg">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h4 class="modal-title">El arte de copiar</h4>
-                                </div>
-                                <div class="modal-body">
-                                                <p>Recientemente Abbas Kiarostami intentaba explicarnos qué significa copiar. Algo, por otro lado, que cualquier alumno de secundaria sabe perfectamente. Siendo justos, lo que pretendía el director iraní era aclararnos, entre otras cosas, la diferencia entre un original y su copia. Hablamos de la película 'Copia certificada', con Juliette Binoche y William Shimel emulando quién sabe si a Ingrid Bergman y George Sanders en 'Te querré siempre'.</p>
-                        
-                                                <p>El asunto, pese a lo intrascendente que parecer, es de los graves. Y no sólo para los profesores del alumno de antes. El arte moderno en general y el cine en particular vive literalmente consumido por este asunto con aspecto de dilema. Y más ahora que el formato digital ha anulado hasta el agotamiento cualquier posibilidad de distinción: leer es necesariamente releer, cada copia es necesariamente un original. Si sienten el aroma de lo posmoderno no me culpen. Son lo tiempos que, definitivamente, hieden.</p>
-                        
-                                                <p>Y para prueba, 'Una familia de Tokio', de Yoji Yamada. El director con más de 80 años de vida y otros tantos títulos en su filmografía se decide a copiar 'Cuentos de Tokio', probablemente la obra más conocida de Yasujiro Ozu. Lo que, básicamente, equivale a decir que estamos delante de una de las obras maestras irrenunciables que ha dado eso llamado cine en toda su historia.</p>
-                        
-                                                <p>Si Jacques Rivette, después de ver 'Te querré siempre', dijo aquello de "Con su aparición, todas las películas han envejecido de repente 10 años"; con la película de Ozu y su cuestionamiento de las reglas lenguaje cinematográfico, el cine entero cambió de era. Es así.</p>
-                        
-                                                <p>La estrategia de Yamada, pese a todo, poco o nada tiene que ver con la de Kiarostami. La idea de este último no era tanto seguir a la película original como utilizarla de excusa para reconstruir desde dentro los límites de la representación. "Es la mirada la que da valor", decía uno de los personajes y en esa frase se jugaba el destino de una película consciente de que la realidad, el original, no es más que una construcción impostada de su copia, su representación. De repente, era el juego de espejos lo que interesaba al director iraní siempre obsesionado por los reflejos.</p>
-                        
-                                                <p>El japonés se limita simplemente a colocar un espejo delante y transcribir casi plano a plano el clásico de Ozu. Lo curioso es que en su ingenuidad y sencillez el resultado acaba por ser similar al de Kiarostami. La historia de unos padres ancianos que visitan a sus hijos en la gran ciudad demasiado ocupados para dedicarles siquiera un segundo de sus vidas, se antoja no tanto una radiografía de los tiempos modernos, como del tiempo mismo, de la vida.</p>
-                        
-                                                <p>El hallazgo de Yamada no consiste tanto en eso tan antimoderno y antipático de actualizar o trasladar a un lenguaje moderno (Ozu sigue siendo el más moderno) lo antiguo como de profundizar en la lectura de una película demasiado grande, hermosa y conmovedora para dejarse encerrar entre el moho de una filmoteca. El recuerdo de 'Cuentos de Tokio' (la vieja) se hace inmenso entre las sombras de 'Una familia de Tokio' (la nueva) a la vez que esta última crece ante los ojos con el pálpito de la memoria. La copia, para aclararnos, no mancha. Al revés, da brillo. Suena cursi y no, es emoción. Pura. conmoción.</p>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <p>23/05/2018 19:10:43</p>
-                </article>
-                <article>
-                        <header>
-                            <h3>¿ES GRAVE DORMIR POCO?</h3>
-                        </header>
-                        <img src="images/15.jpg" data-toggle="modal" data-target="#myModal2"/>
-                        
-                        
-                        <div class="modal fade" id="myModal2" role="dialog">
-                                <div class="modal-dialog modal-lg">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h4 class="modal-title">¿ES GRAVE DORMIR POCO?</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                            <p>¿Por qué necesitamos dormir? Ésta es una pregunta que la neurociencia se ha hecho desde hace mucho tiempo, y para la que aún no existe una contestación precisa, más allá de que el sueño cumple una función de regeneración indispensable para que las neuronas puedan funcionar correctamente. Sin embargo, tenemos muy claro que sin sueño, los mamíferos no pueden seguir vivos.</p>
+              <p>El asunto, pese a lo intrascendente que parecer, es de los graves. Y no sólo para los profesores del alumno
+                de antes. El arte moderno en general y el cine en particular vive literalmente consumido por este asunto
+                con aspecto de dilema. Y más ahora que el formato digital ha anulado hasta el agotamiento cualquier posibilidad
+                de distinción: leer es necesariamente releer, cada copia es necesariamente un original. Si sienten el aroma
+                de lo posmoderno no me culpen. Son lo tiempos que, definitivamente, hieden.</p>
 
-                                            <p>A lo largo de los últimos años, el foco de atención de la investigación se ha ido centrando progresivamente en las consecuencias para la salud de dormir poco. ¿Qué es dormir poco? Podríamos definirlo como reducir nuestras necesidades reales de sueño en al menos un 25%. Sabemos que la privación parcial de sueño, ejercitada de manera crónica, afecta al estado de ánimo, y aumenta el riesgo de depresión clínica en al menos un 50%. Por otro lado, tiene efectos importantes sobre la atención y sobre la memoria que acaban afectando al rendimiento y a la capacidad de toma de decisiones.</p>
-                                            
-                                           <p> Merecen particular interés los efectos biológicos sobre la salud: Las personas que duermen poco tienen un mayor riesgo de padecer de Diabetes, y si ya la tienen, ésta se convierte en menos manejable y puede acabar produciendo un Síndrome Metabólico. Tambien tienen un riesgo aumentado de sufrir obesidad. La privación de sueño tambien produce alteraciones en la secreción de algunas hormonas y altera funciones del Sistema Nervioso que acaban por causar hipertensión arterial. Tambien el riesgo de padecer de accidentes cerebrovasculaes y de problemas de corazón parece aumentar a largo plazo. Todo esto se refiere a la privación parcial (es decir, voluntaria) de sueño, que no es lo mismo que insomnio (éste seria la incapacidad subjetiva de dormir suficiente).</p>
-                                           <p> Por último, dormir poco agrava algunas enfermedades del sueño, como el Síndrome de Piernas Inquietas (Enf. Willis-Ekbom), o el Síndrome de Apnea del Sueño. Tampoco a la narcolepsia le hace ningún bien. De todo ello se va a hablar sobradamente en un Simposium que tendrá lugar en Burgos, durante el pröximo congreso de la Sociedad Española de Sueño.</p>
-                                            
-                                            <p>Sin embargo, y para complicar la s cosas aún más, la restricción de sueño, ejercitada de manera temporal, puede ser útil para tratar algunos tipos de insomnio. Para ello, es clave que se realice bajo supervisión de un profesional.</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <p>18/05/2018 16:34:19</p>
-                        </article>
-            </li>
-        </ul>
+              <p>Y para prueba, 'Una familia de Tokio', de Yoji Yamada. El director con más de 80 años de vida y otros tantos
+                títulos en su filmografía se decide a copiar 'Cuentos de Tokio', probablemente la obra más conocida de Yasujiro
+                Ozu. Lo que, básicamente, equivale a decir que estamos delante de una de las obras maestras irrenunciables
+                que ha dado eso llamado cine en toda su historia.</p>
+
+              <p>Si Jacques Rivette, después de ver 'Te querré siempre', dijo aquello de "Con su aparición, todas las películas
+                han envejecido de repente 10 años"; con la película de Ozu y su cuestionamiento de las reglas lenguaje cinematográfico,
+                el cine entero cambió de era. Es así.</p>
+
+              <p>La estrategia de Yamada, pese a todo, poco o nada tiene que ver con la de Kiarostami. La idea de este último
+                no era tanto seguir a la película original como utilizarla de excusa para reconstruir desde dentro los límites
+                de la representación. "Es la mirada la que da valor", decía uno de los personajes y en esa frase se jugaba
+                el destino de una película consciente de que la realidad, el original, no es más que una construcción impostada
+                de su copia, su representación. De repente, era el juego de espejos lo que interesaba al director iraní siempre
+                obsesionado por los reflejos.</p>
+
+              <p>El japonés se limita simplemente a colocar un espejo delante y transcribir casi plano a plano el clásico de
+                Ozu. Lo curioso es que en su ingenuidad y sencillez el resultado acaba por ser similar al de Kiarostami.
+                La historia de unos padres ancianos que visitan a sus hijos en la gran ciudad demasiado ocupados para dedicarles
+                siquiera un segundo de sus vidas, se antoja no tanto una radiografía de los tiempos modernos, como del tiempo
+                mismo, de la vida.</p>
+
+              <p>El hallazgo de Yamada no consiste tanto en eso tan antimoderno y antipático de actualizar o trasladar a un
+                lenguaje moderno (Ozu sigue siendo el más moderno) lo antiguo como de profundizar en la lectura de una película
+                demasiado grande, hermosa y conmovedora para dejarse encerrar entre el moho de una filmoteca. El recuerdo
+                de 'Cuentos de Tokio' (la vieja) se hace inmenso entre las sombras de 'Una familia de Tokio' (la nueva) a
+                la vez que esta última crece ante los ojos con el pálpito de la memoria. La copia, para aclararnos, no mancha.
+                Al revés, da brillo. Suena cursi y no, es emoción. Pura. conmoción.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="date">23/05/2018 19:10:43</p>
+    </article>
 
 
-        <p id="loading">
-            <img src="images/loading.gif" alt="Loading…" />
-        </p>
+    <article>
+      <header>
+        <h1 class= "title">¿Es grave dormir poco?</h1>
+      </header>
+      <img src="images/15.jpg" data-toggle="modal" data-target="#myModal2" />
+      <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">¿Es grave dormir poco?</h4>
+            </div>
+            <div class="modal-body">
+              <p>¿Por qué necesitamos dormir? Ésta es una pregunta que la neurociencia se ha hecho desde hace mucho tiempo,
+                y para la que aún no existe una contestación precisa, más allá de que el sueño cumple una función de regeneración
+                indispensable para que las neuronas puedan funcionar correctamente. Sin embargo, tenemos muy claro que sin
+                sueño, los mamíferos no pueden seguir vivos.</p>
+
+              <p>A lo largo de los últimos años, el foco de atención de la investigación se ha ido centrando progresivamente
+                en las consecuencias para la salud de dormir poco. ¿Qué es dormir poco? Podríamos definirlo como reducir
+                nuestras necesidades reales de sueño en al menos un 25%. Sabemos que la privación parcial de sueño, ejercitada
+                de manera crónica, afecta al estado de ánimo, y aumenta el riesgo de depresión clínica en al menos un 50%.
+                Por otro lado, tiene efectos importantes sobre la atención y sobre la memoria que acaban afectando al rendimiento
+                y a la capacidad de toma de decisiones.</p>
+
+              <p> Merecen particular interés los efectos biológicos sobre la salud: Las personas que duermen poco tienen un mayor
+                riesgo de padecer de Diabetes, y si ya la tienen, ésta se convierte en menos manejable y puede acabar produciendo
+                un Síndrome Metabólico. Tambien tienen un riesgo aumentado de sufrir obesidad. La privación de sueño tambien
+                produce alteraciones en la secreción de algunas hormonas y altera funciones del Sistema Nervioso que acaban
+                por causar hipertensión arterial. Tambien el riesgo de padecer de accidentes cerebrovasculaes y de problemas
+                de corazón parece aumentar a largo plazo. Todo esto se refiere a la privación parcial (es decir, voluntaria)
+                de sueño, que no es lo mismo que insomnio (éste seria la incapacidad subjetiva de dormir suficiente).</p>
+              <p> Por último, dormir poco agrava algunas enfermedades del sueño, como el Síndrome de Piernas Inquietas (Enf.
+                Willis-Ekbom), o el Síndrome de Apnea del Sueño. Tampoco a la narcolepsia le hace ningún bien. De todo ello
+                se va a hablar sobradamente en un Simposium que tendrá lugar en Burgos, durante el pröximo congreso de la
+                Sociedad Española de Sueño.</p>
+
+              <p>Sin embargo, y para complicar la s cosas aún más, la restricción de sueño, ejercitada de manera temporal, puede
+                ser útil para tratar algunos tipos de insomnio. Para ello, es clave que se realice bajo supervisión de un
+                profesional.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="date">18/05/2018 16:34:19</p>
+    </article>
+  </div>
+
+
+  <p id="loading">
+    <img src="images/loading.gif" alt="Loading…" />
+  </p>
+
 </body>
-</html>    
+
+</html>

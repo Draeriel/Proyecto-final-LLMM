@@ -1,23 +1,42 @@
 body {
     margin: 0;
     font-family: 'Liberation Sans', Arial, sans-serif;
+    max-width: 100%;
 }
+.header {
 
-h1 {
+    background: linear-gradient(-135deg, rgb(250, 152, 229), rgb(16, 223, 223), rgb(30, 218, 30))no-repeat center center fixed;
+    margin: 0;
+    height: 300px;
+}
+.icon {
+    -webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+    margin: 0;
+    height: 310px;
+    width: 310px;
+    max-width: 100%;
+}
+h3 {
     text-align: center;
 }
 
 #posts {
-    margin: 0 auto;
+    margin-left: 10%;
     padding: 0;
     width: 900px;
+
     margin-right:300px;
-    list-style-type: none;
+    max-width: 100%;
 }
 
-article h3 {
-    text-align: left;
-    border-bottom: 1px dotted #E3E3E3;
+article {
+    margin-top: 100px;
+    background: linear-gradient(135deg, rgb(250, 152, 229), rgb(16, 223, 223), rgb(30, 218, 30))no-repeat center center fixed;
+    margin-left: -80px;
+    border: 6px dotted greenyellow;
+    margin-bottom: 25px;
+    max-width: 100%;
 }
 
 article p {
@@ -26,12 +45,15 @@ article p {
     font-size: 1.1em;
 }
 
-#loading {
-    display: none;
-    text-align: center;
-}
 
 img {
+    -webkit-transform: rotate(15deg);
+	transform: rotate(15deg);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+    margin-left: 100px;
+    padding-right: 20px;
+    padding-bottom: 10px;
     width: 700px;
 }
 
@@ -39,5 +61,97 @@ img {
     display: none;
 }
 .date {
-    margin-bottom: 125px;
+    margin-top: 10%;
+    margin-right: 20%;
+    text-align: right;
+    padding-bottom: 30px;
+    
 }
+.title {
+    padding-top: 30px;
+    margin-left: 50px;
+    font-weight: 300;
+    margin-bottom: 10%;
+}
+.spotify {
+    height: 46%;
+    margin-left:78%;
+    position: fixed;
+    margin-top: -300px;
+}
+img:hover {
+    -webkit-transform: rotate(0) scale(1);
+	transform: rotate(0) scale(1);
+    opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+button {
+    float: right;
+    height: 40px;
+    margin-bottom: 20px;
+    line-height: 60px;
+    font-weight: bold;
+    padding: 0 40px;
+    background: salmon;
+    border: none;
+  }
+button:hover {
+    animation: pulse .2s infinite;
+}
+@keyframes pulse {
+    0%, 100%  {
+      background-color: lime;
+    }
+    33% {
+      background-color: blue;
+    }
+    66% {
+      background-color: #ff0080;
+    }
+  
+  }
+@media screen and (max-width: 980px) {
+    img{
+      width: 88%;
+      height: auto;
+      -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        margin-left: 10%;
+        margin-right: auto;
+    }
+    .icon{
+        padding-right:0;
+        height: 310px;
+        width: 310px;
+    }
+    #posts{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    article {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .spotify {
+        display: none;
+    }
+  }
