@@ -86,6 +86,9 @@ img:hover {
 	-webkit-animation: flash 1.5s;
 	animation: flash 1.5s;
 }
+#ban{
+    display:none;
+}
 @-webkit-keyframes flash {
 	0% {
 		opacity: .4;
@@ -109,21 +112,22 @@ button {
     line-height: 60px;
     font-weight: bold;
     padding: 0 40px;
-    background: salmon;
+    background: linear-gradient(-135deg, rgb(250, 152, 229), rgb(16, 223, 223), rgb(30, 218, 30));
     border: none;
   }
 button:hover {
+    background: rgb(250, 152, 229);
     animation: pulse .2s infinite;
 }
 @keyframes pulse {
     0%, 100%  {
-      background-color: lime;
+      background-color: rgb(250, 152, 229);
     }
     33% {
-      background-color: blue;
+      background-color: rgb(16, 223, 223);
     }
     66% {
-      background-color: #ff0080;
+      background-color: rgb(30, 218, 30);
     }
   
   }
@@ -153,5 +157,35 @@ button:hover {
     }
     .spotify {
         display: none;
+    }
+    #ban {
+        bottom: 0;
+        position: fixed;
+        display: block;
+        z-index: 10;
+        
+    }
+    #banner {
+        margin: 0;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        opacity: 0.8;
+        z-index: 3;
+    }
+    #banner:hover {
+        -webkit-animation: flash 1.5s;
+        animation: flash 1.5s;
+        opacity: 1;
+    }
+    #close {
+        float: right;
+        position: absolute;
+        padding: 0;
+        z-index: 11;
+        right:1%;
+        height: 11%;
+        width: auto;
+        cursor: pointer;
     }
   }
