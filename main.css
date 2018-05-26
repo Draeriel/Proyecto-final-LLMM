@@ -131,6 +131,12 @@ button:hover {
     }
   
   }
+.youtube {
+    position: relative;
+    max-width: 88vw;
+    max-height: 50vw;
+    padding-bottom: 3%;
+}
 @media screen and (max-width: 980px) {
     img{
       width: 88%;
@@ -140,6 +146,7 @@ button:hover {
         margin-left: 10%;
         margin-right: auto;
     }
+    
     .icon{
         padding-right:0;
         height: 310px;

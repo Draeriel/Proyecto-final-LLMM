@@ -128,7 +128,7 @@ $(document).ready(function () {
                                         title = val;
                                         items.push("<header><h1 class='" + key + "'>" + val + "</h1></header>")
                                     }
-                                    if (key == "youtube") {
+                                    if (key == "video") {
                                         items.push(val)
                                         $("<article/>", {
                                             "class": "article",
