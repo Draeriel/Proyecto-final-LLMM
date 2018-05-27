@@ -36,7 +36,7 @@ article {
     margin-left: -80px;
     border: 6px dotted greenyellow;
     margin-bottom: 25px;
-    max-width: 100%;
+    max-width: 100vw;
 }
 
 article p {
@@ -62,10 +62,10 @@ img {
 }
 .date {
     margin-top: 10%;
-    margin-right: 20%;
+    margin-right: 2%;
     text-align: right;
     padding-bottom: 30px;
-    
+    font-weight: 600;
 }
 .title {
     padding-top: 30px;
@@ -73,10 +73,21 @@ img {
     font-weight: 300;
     margin-bottom: 10%;
 }
+.add {
+    float: right;
+    height: 100%;
+    width: auto;
+    -webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+    position: sticky;
+    margin-right: -30%;
+    top: 4vh;;
+}
 .spotify {
     height: 46%;
     margin-left:78%;
-    position: fixed;
+    position: sticky;
+    top: 15px;;
     margin-top: -300px;
 }
 img:hover {
@@ -194,5 +205,8 @@ button:hover {
         height: 11%;
         width: auto;
         cursor: pointer;
+    }
+    .add{
+        display: none;
     }
   }
