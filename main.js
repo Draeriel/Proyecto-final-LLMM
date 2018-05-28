@@ -68,7 +68,7 @@ $(document).ready(function () {
                             }).appendTo("#posts");
 
                             items = [];}
-                            
+
                         if (key == "date") {
                             items.push("<p class='" + key + "'>" + val + "</li>");
                             $("<article/>", {
@@ -124,6 +124,7 @@ $(document).ready(function () {
                             }
                             if (key == "date") {
                                 items.push("<p class='" + key + "'>" + val + "</li>");
+                                items.push("<div class='social'><a href='https://www.facebook.com/sharer/sharer.php?u=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=main&news=" + counter + "' class='link facebook' target='_blank'><span class='fa fa-facebook-square'></span></a><a href='https://twitter.com/home?status=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=main&news=" + counter + "' class='link twitter' target='_blank'><span class='fa fa-twitter'></span></a><a href='https://plus.google.com/share?url=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=main&news=" + counter + "' class='link google-plus' target='_blank'><span class='fa fa-google-plus-square'></span></a></div>")
                                 $("<article/>", {
                                     "class": "article",
                                     html: items.join("")
@@ -147,8 +148,8 @@ $(document).ready(function () {
 
 
                 boton.innerHTML = "Abrir Hexeosis";
-                var body = document.getElementsByTagName("body")[0];
-                body.appendChild(boton);
+                var botonador = document.getElementById("botonador");
+                botonador.appendChild(boton);
                 boton.addEventListener("click", function () {
                     $.getJSON("hexeosis.json", function (data) {
                         var items = [];
@@ -156,6 +157,7 @@ $(document).ready(function () {
                             $.each(data[counter], function (key, val) {
                                 if (key == "img") {
                                     items.push("<img src='" + val + "' />")
+                                    items.push("<div class='social'><a href='https://www.facebook.com/sharer/sharer.php?u=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=hexeosis&news=" + counter + "' class='link facebook' target='_blank' onclick='openGraph()'><span class='fa fa-facebook-square'></span></a><a href='https://twitter.com/home?status=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=hexeosis&news=" + counter + "' class='link twitter' target='_blank' onclick='openGraph()'><span class='fa fa-twitter'></span></a><a href='https://plus.google.com/share?url=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=hexeosis&news=" + counter + "' class='link google-plus' target='_blank' onclick='openGraph()'><span class='fa fa-google-plus-square'></span></a></div>")
                                     $("<article/>", {
                                         "class": "article",
                                         html: items.join("")
@@ -175,8 +177,8 @@ $(document).ready(function () {
 
 
                     boton.innerHTML = "Memes Carrero Blanco";
-                    var body = document.getElementsByTagName("body")[0];
-                    body.appendChild(boton);
+                    var botonador = document.getElementById("botonador");
+                    botonador.appendChild(boton);
                     boton.addEventListener("click", function () {
                         $.getJSON("carrero.json", function (data) {
                             var items = [];
@@ -184,6 +186,7 @@ $(document).ready(function () {
                                 $.each(data[counter], function (key, val) {
                                     if (key == "img") {
                                         items.push("<img src='" + val + "' />")
+                                        items.push("<div class='social'><a href='https://www.facebook.com/sharer/sharer.php?u=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=carrero&news=" + counter + "' class='link facebook' target='_blank'><span class='fa fa-facebook-square'></span></a><a href='https://twitter.com/home?status=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=carrero&news=" + counter + "' class='link twitter' target='_blank'><span class='fa fa-twitter'></span></a><a href='https://plus.google.com/share?url=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=carrero&news=" + counter + "' class='link google-plus' target='_blank'><span class='fa fa-google-plus-square'></span></a></div>")
                                         $("<article/>", {
                                             "class": "article",
                                             html: items.join("")
@@ -202,8 +205,8 @@ $(document).ready(function () {
 
 
                     boton.innerHTML = "Videos Numberphile";
-                    var body = document.getElementsByTagName("body")[0];
-                    body.appendChild(boton);
+                    var botonador = document.getElementById("botonador");
+                    botonador.appendChild(boton);
                     boton.addEventListener("click", function () {
                         $.getJSON("youtube.json", function (data) {
                             var items = [];
@@ -215,6 +218,8 @@ $(document).ready(function () {
                                     }
                                     if (key == "video") {
                                         items.push(val)
+                                        items.push("<div class='social'><a href='https://www.facebook.com/sharer/sharer.php?u=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=youtube&news=" + counter + "' class='link facebook' target='_blank'><span class='fa fa-facebook-square'></span></a><a href='https://twitter.com/home?status=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=youtube&news=" + counter + "' class='link twitter' target='_blank'><span class='fa fa-twitter'></span></a><a href='https://plus.google.com/share?url=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=youtube&news=" + counter + "' class='link google-plus' target='_blank'><span class='fa fa-google-plus-square'></span></a></div>")
+
                                         $("<article/>", {
                                             "class": "article",
                                             html: items.join("")
@@ -236,6 +241,12 @@ $(document).ready(function () {
     });
 });
 
-function cerrar() {
+function openGraph() {
+   $("meta[property='og:image']").setAttribute(("content", noticia.imgbig));
+   $("meta[property='og:title']").setAttribute(("content", noticia.title));
+   $("meta[property='og:url']").setAttribute(("content", "https://www.facebook.com/sharer/sharer.php?u=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page="+page+"&news="+news));
+   }
+
+   function cerrar() {
     document.getElementById("ban").style.display = "none";
 }

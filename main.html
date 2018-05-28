@@ -2,37 +2,72 @@
 <html>
 
 <head>
-  <title>Your Adventure</title>
+  <title>Noticias frescas fpdual</title>
   <meta content="text/html; charset=utf-8" http-equiv="content-type">
-  <meta name="description" content="noticias mvpigs, fpdual" />
   <meta name="keywords" content="mvpigs, dual, noticias, infinite, scroll" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:site_name" content="MVPIGS NEWS" />
+  <meta property="og:title" content="20 personas empezaron la FP dual y pasó esto:" />
+  <meta property="og:url" content="https://rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html" />
+  <meta name="description" content="Las aventuras y desventuras de un los alumnos de dual, con sus forks, xops, tocados y demás cosas random." />
+  <meta property="og:image" content="images/pig.png" />
+
+  <link rel="alternate" type="application/rss+xml" title="feed" href="feed.xml" class="icon"/>
   <link rel="stylesheet" type="text/css" href="main.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   <script src="main.js"></script>
   <script type="text/javascript" src="muhTriangles.min.js"></script>
 </head>
-<header class="header">
-  <img class="icon" src="images/pig.png" />
-</header>
+
 <body>
-    <div style="position:fixed; z-index:-1; top:0; left:0; width:100%; height:100%;">
-        <canvas id="canvas" style="width:100%; height:100%;"></canvas>
-        <script type="text/javascript">new MuhTriangles("canvas", {"saturation":8,"huePeriod":80,"lightness":1.2,"outline":true,"outlineColor":"rgba(255,255,255,0.12)","outlineThickness":1,"gradientType":"radial","gradientIntensity":1,"gradientMode":"smooth","gradientInvert":false,"speed":1.7,"instability":1.3,"density":2,"responsiveDensity":true,"model":"hexagons","fps":22});</script>
-      </div>
+    <header class="header">
+        <img class="icon" src="images/pig.png" />
+      </header>
+      
+  <div style="position:fixed; z-index:-1; top:0; left:0; width:100%; height:100%;">
+    <canvas id="canvas" style="width:100%; height:100%;"></canvas>
+    <script type="text/javascript">
+      new MuhTriangles("canvas", {
+        "saturation": 8,
+        "huePeriod": 80,
+        "lightness": 1.2,
+        "outline": true,
+        "outlineColor": "rgba(255,255,255,0.12)",
+        "outlineThickness": 1,
+        "gradientType": "radial",
+        "gradientIntensity": 1,
+        "gradientMode": "smooth",
+        "gradientInvert": false,
+        "speed": 1.7,
+        "instability": 1.3,
+        "density": 2,
+        "responsiveDensity": true,
+        "model": "hexagons",
+        "fps": 22
+      });
+    </script>
+  </div>
   <div id="ban">
-      <img id="close" src="images/close.png" onclick="cerrar()" alt="close" title="close"/>
-    <a href="http://www.beprogmyfriend.com/18/entradas/" onclick="cerrar()"><img id="banner" src="images/banner.jpg" alt="beprog" title="Obtén tu entrada ya" /></a>
-</div>
+    <img id="close" src="images/close.png" onclick="cerrar()" alt="close" title="close" />
+    <a href="http://www.beprogmyfriend.com/18/entradas/" onclick="cerrar()">
+      <img id="banner" src="images/banner.jpg" alt="beprog" title="Obtén tu entrada ya" />
+    </a>
+  </div>
+  
   <div id="posts">
     <article>
       <header>
         <h1 class="title">El arte de copiar</h1>
       </header>
+
+    
       <img src="images/11.jpg" data-toggle="modal" data-target="#myModal1" />
+
       <div class="modal fade" id="myModal1" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
@@ -44,7 +79,8 @@
                 alumno de secundaria sabe perfectamente. Siendo justos, lo que pretendía el director iraní era aclararnos,
                 entre otras cosas, la diferencia entre un original y su copia. Hablamos de la película 'Copia certificada',
                 con Juliette Binoche y William Shimel emulando quién sabe si a Ingrid Bergman y George Sanders en 'Te querré
-                siempre'.</p>
+                siempre'.
+              </p>
 
               <p>El asunto, pese a lo intrascendente que parecer, es de los graves. Y no sólo para los profesores del alumno
                 de antes. El arte moderno en general y el cine en particular vive literalmente consumido por este asunto
@@ -88,15 +124,20 @@
         </div>
       </div>
       <p class="date">23/05/2018 19:10:43</p>
+      <div class="social">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html" class="link facebook" target="_blank"><span class="fa fa-facebook-square"></span></a>
+          <a href="https://twitter.com/home?status=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html" class="link twitter" target="_blank"><span class="fa fa-twitter"></span></a>
+          <a href="https://plus.google.com/share?url=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html" class="link google-plus" target="_blank"><span class="fa fa-google-plus-square"></span></a>
+        </div>
     </article>
 
     <a href="https://bit.ly/IqT6zt">
       <img class="add" src="images/add.gif" />
-      </a>
+    </a>
 
     <article>
       <header>
-        <h1 class= "title">¿Es grave dormir poco?</h1>
+        <h1 class="title">¿Es grave dormir poco?</h1>
       </header>
       <img src="images/15.jpg" data-toggle="modal" data-target="#myModal2" />
       <div class="modal fade" id="myModal2" role="dialog">
@@ -132,7 +173,8 @@
 
               <p>Sin embargo, y para complicar la s cosas aún más, la restricción de sueño, ejercitada de manera temporal, puede
                 ser útil para tratar algunos tipos de insomnio. Para ello, es clave que se realice bajo supervisión de un
-                profesional.</p>
+                profesional.
+              </p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -141,8 +183,26 @@
         </div>
       </div>
       <p class="date">18/05/2018 16:34:19</p>
+      <div class="social">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html" class="link facebook" target="_blank"><span class="fa fa-facebook-square"></span></a>
+          <a href="https://twitter.com/home?status=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html" class="link twitter" target="_blank"><span class="fa fa-twitter"></span></a>
+          <a href="https://plus.google.com/share?url=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html" class="link google-plus" target="_blank"><span class="fa fa-google-plus-square"></span></a>
+        </div>
     </article>
   </div>
+  <div id="botonador"></div>
+
+  <footer class="footer">
+    <div id="footerdiv">
+      <div class="social">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html" class="link facebook" target="_blank"><span class="fa fa-facebook-square"></span></a>
+          <a href="https://twitter.com/home?status=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html" class="link twitter" target="_blank"><span class="fa fa-twitter"></span></a>
+          <a href="https://plus.google.com/share?url=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html" class="link google-plus" target="_blank"><span class="fa fa-google-plus-square"></span></a>
+          <a href="feed.xml" type="application/rss+xml" class="link rss" target="_parent"><span class="fa fa-rss-square"></span></a>
+        </div>
+        </div>
+      
+  </footer>
 
 </body>
 

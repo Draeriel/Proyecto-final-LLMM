@@ -9,6 +9,15 @@ body {
     margin: 0;
     height: 300px;
 }
+.footer {
+    position: relative;
+    background: linear-gradient(-135deg, rgb(250, 152, 229), rgb(16, 223, 223), rgb(30, 218, 30))no-repeat center center fixed;
+    bottom: -50px;
+    height: 300px;
+}
+#footerdiv {
+    padding-top: 10vh;
+}
 .icon {
     -webkit-transform: rotate(0deg);
 	transform: rotate(0deg);
@@ -17,6 +26,7 @@ body {
     width: 310px;
     max-width: 100%;
 }
+
 h3 {
     text-align: center;
 }
@@ -148,6 +158,68 @@ button:hover {
     max-height: 50vw;
     padding-bottom: 3%;
 }
+
+.social {
+    margin-top: 25px;
+    position: relative;
+    width: 100%;
+    transform: translateY(-50%);
+    
+    
+  }
+  
+  .social .link {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 2px dashed white;
+    background-clip: content-box;
+    padding: 10px;
+    transition: .5s;
+    color: #D7D0BE;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 70px;
+  }
+  
+  .social .link span {
+    display: block;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .social .link:hover {
+    
+    padding: 20px;
+    color: white;
+    margin-left: -5px;
+    transform: translateX(10px) rotate(360deg);
+  }
+  
+  .social .link.google-plus {
+    background-color: white;
+    color: tomato;
+  }
+  
+  .social .link.twitter {
+    color: #00ACEE;
+    background-color: white;
+  }
+  
+  .social .link.facebook {
+    color: #3B5998;
+    background-color: white;
+  }
+
+  .social .link.rss {
+    color: rgb(233, 146, 16);
+    background-color: white;
+  }
 @media screen and (max-width: 980px) {
     img{
       width: 88%;
