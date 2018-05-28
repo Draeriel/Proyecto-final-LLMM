@@ -124,7 +124,7 @@ $(document).ready(function () {
                             }
                             if (key == "date") {
                                 items.push("<p class='" + key + "'>" + val + "</li>");
-                                items.push("<div class='social'><a href='https://www.facebook.com/sharer/sharer.php?u=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=main&news=" + counter + "' class='link facebook' target='_blank'><span class='fa fa-facebook-square'></span></a><a href='https://twitter.com/home?status=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=main&news=" + counter + "' class='link twitter' target='_blank'><span class='fa fa-twitter'></span></a><a href='https://plus.google.com/share?url=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=main&news=" + counter + "' class='link google-plus' target='_blank'><span class='fa fa-google-plus-square'></span></a></div>")
+                                items.push("<div class='social'><a href='https://www.facebook.com/sharer/sharer.php?u=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=main&news=" + counter + "' class='link facebook' target='_blank' onclick='opengraph()'><span class='fa fa-facebook-square'></span></a><a href='https://twitter.com/home?status=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=main&news=" + counter + "' class='link twitter' target='_blank'><span class='fa fa-twitter' onclick='opengraph()'></span></a><a href='https://plus.google.com/share?url=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=main&news=" + counter + "' class='link google-plus' target='_blank' onclick='opengraph(https://plus.google.com/share?url=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=main&news=" + counter + "', data[counter].imgbig)'><span class='fa fa-google-plus-square'></span></a></div>")
                                 $("<article/>", {
                                     "class": "article",
                                     html: items.join("")
@@ -241,10 +241,10 @@ $(document).ready(function () {
     });
 });
 
-function openGraph() {
-   $("meta[property='og:image']").setAttribute(("content", noticia.imgbig));
-   $("meta[property='og:title']").setAttribute(("content", noticia.title));
-   $("meta[property='og:url']").setAttribute(("content", "https://www.facebook.com/sharer/sharer.php?u=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page="+page+"&news="+news));
+function opengraph(url, img) {
+   $("meta[property='og:image']").setAttribute(("content", img));
+   $("meta[property='og:title']").setAttribute(("content", 'hi'));
+   $("meta[property='og:url']").setAttribute(("content", url));
    }
 
    function cerrar() {
