@@ -4,6 +4,7 @@ $(document).ready(function () {
     let buttonnode;
     var isButton = false;
     
+    
 
     let getUrlParameter = function getUrlParameter(sParam) {
         let sPageURL = decodeURIComponent(window.location.search.substring(1)),
@@ -53,6 +54,8 @@ $(document).ready(function () {
                         }
                         if (key == "img") {
                             items.push("<img src='" + val + "' />")
+                            items.push("<div class='social'><a href='https://www.facebook.com/sharer/sharer.php?u=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=" + page +"&news=" + news + "' class='link facebook' target='_blank' onclick='openGraph()'><span class='fa fa-facebook-square'></span></a><a href='https://twitter.com/home?status=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=" + page + "&news=" + news + "' class='link twitter' target='_blank' onclick='openGraph()'><span class='fa fa-twitter'></span></a><a href='https://plus.google.com/share?url=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=" + page + "&news=" + news + "' class='link google-plus' target='_blank' onclick='openGraph()'><span class='fa fa-google-plus-square'></span></a></div>")
+
                             $("<article/>", {
                                 "class": "article",
                                 html: items.join("")
@@ -62,6 +65,8 @@ $(document).ready(function () {
                         }
                         if (key == "video") {
                             items.push(val)
+                            items.push("<div class='social'><a href='https://www.facebook.com/sharer/sharer.php?u=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=" + page +"&news=" + news + "' class='link facebook' target='_blank' onclick='openGraph()'><span class='fa fa-facebook-square'></span></a><a href='https://twitter.com/home?status=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=" + page + "&news=" + news + "' class='link twitter' target='_blank' onclick='openGraph()'><span class='fa fa-twitter'></span></a><a href='https://plus.google.com/share?url=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=" + page + "&news=" + news + "' class='link google-plus' target='_blank' onclick='openGraph()'><span class='fa fa-google-plus-square'></span></a></div>")
+
                             $("<article/>", {
                                 "class": "article",
                                 html: items.join("")
@@ -70,7 +75,10 @@ $(document).ready(function () {
                             items = [];}
 
                         if (key == "date") {
+                            
                             items.push("<p class='" + key + "'>" + val + "</li>");
+                            items.push("<div class='social'><a href='https://www.facebook.com/sharer/sharer.php?u=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=" + page +"&news=" + news + "' class='link facebook' target='_blank' onclick='openGraph()'><span class='fa fa-facebook-square'></span></a><a href='https://twitter.com/home?status=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=" + page + "&news=" + news + "' class='link twitter' target='_blank' onclick='openGraph()'><span class='fa fa-twitter'></span></a><a href='https://plus.google.com/share?url=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=" + page + "&news=" + news + "' class='link google-plus' target='_blank' onclick='openGraph()'><span class='fa fa-google-plus-square'></span></a></div>")
+
                             $("<article/>", {
                                 "class": "article",
                                 html: items.join("")
@@ -124,7 +132,7 @@ $(document).ready(function () {
                             }
                             if (key == "date") {
                                 items.push("<p class='" + key + "'>" + val + "</li>");
-                                items.push("<div class='social'><a href='https://www.facebook.com/sharer/sharer.php?u=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=main&news=" + counter + "' class='link facebook' target='_blank' onclick='opengraph()'><span class='fa fa-facebook-square'></span></a><a href='https://twitter.com/home?status=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=main&news=" + counter + "' class='link twitter' target='_blank'><span class='fa fa-twitter' onclick='opengraph()'></span></a><a href='https://plus.google.com/share?url=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=main&news=" + counter + "' class='link google-plus' target='_blank' onclick='opengraph(https://plus.google.com/share?url=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=main&news=" + counter + "', data[counter].imgbig)'><span class='fa fa-google-plus-square'></span></a></div>")
+                                items.push("<div class='social'><a href='https://www.facebook.com/sharer/sharer.php?u=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=main&news=" + counter + "' class='link facebook' target='_blank' onclick='opengraph()'><span class='fa fa-facebook-square'></span></a><a href='https://twitter.com/home?status=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=main&news=" + counter + "' class='link twitter' target='_blank'><span class='fa fa-twitter' onclick='opengraph()'></span></a><a href='https://plus.google.com/share?url=https%3A//rawgit.com/Draeriel/Proyecto-final-LLMM/master/main.html?page=main&news=" + counter + "' class='link google-plus' target='_blank' onclick='opengraph(" + prueba + ")'><span class='fa fa-google-plus-square'></span></a></div>")
                                 $("<article/>", {
                                     "class": "article",
                                     html: items.join("")
@@ -239,12 +247,12 @@ $(document).ready(function () {
             }
         }
     });
+    var prueba = '';
 });
 
-function opengraph(url, img) {
-   $("meta[property='og:image']").setAttribute(("content", img));
-   $("meta[property='og:title']").setAttribute(("content", 'hi'));
-   $("meta[property='og:url']").setAttribute(("content", url));
+function opengraph(img) {
+    console.log(prueba);
+   $("meta[property='og:image']").setAttribute(("content", prueba));
    }
 
    function cerrar() {
